@@ -40,12 +40,16 @@ void loop(){
 
 
   delay(10);
- if(distance<=20){
+ if(distance<=30){
        analogWrite(right1,200);
        analogWrite(left1,0);
-  delay(2000);
+  delay(3000);
   }
     }
+    if(type <= 0){
+       analogWrite(right1,0);
+       analogWrite(left1,0);
+      }
       Serial.println(analogRead(mic));
   Serial.println(type);
 }
